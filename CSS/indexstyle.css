@@ -7,7 +7,7 @@ ul {
   overflow: hidden;
   background-color: #333333;
 }
-span{
+.hud{
   padding: 32px;
   color: #111111;
 }
