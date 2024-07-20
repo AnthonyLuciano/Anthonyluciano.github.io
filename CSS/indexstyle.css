@@ -7,7 +7,10 @@ ul {
   overflow: hidden;
   background-color: #333333;
 }
-
+span{
+  padding: 32px;
+  color: #111111;
+}
 li {
   float: left;
 }
