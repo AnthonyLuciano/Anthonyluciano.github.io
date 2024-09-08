@@ -44,6 +44,12 @@ position: absolute;
   display: inline-block;
   font-size: 16px;
 }
+@media screen and (min-width: 900px) {
+  .um{
+    height: 300px;
+    width: 200px;
+  }
+}
 * {
 
   box-sizing: border-box;
