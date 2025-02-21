@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="style.css">
 <head>
-<title>Pagina Inicial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="icone" href="/index"><img src="Images/Perfil.png" width="50"></a>
-<div class="topnav">
-	<!--Hud-->
-	<a class="split" href="/homepage">English Version</a>
-	<a href="/projetopadawan">Projeto Padawan</a>
-	<a href="/contato">Contato</a>
-	<a href="/Certificados">Certificados</a>
+    <header>
+        <div class="container">
+            <h1>Anthony Luciano |</h1>
+            <p>Software Student</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	<!--fim do hud-->
-	
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Anthony, a passionate Student learning how to build web applications, mobile apps, and backend systems. Currently learning Java and Python, finding ways to solve complex problems with clean and efficient code.</p>
+        </div>
+    </section>
 
-</div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java (Spring Boot)</li>
+                <li>SQL Databases</li>
+            </ul>
+        </div>
+    </section>
 
-<section id="sobre">
-	<h1>Olá, sou Anthony!</h1>
-	<p>Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação.</p>
-	<img class="um" src="/Images/fotodeperfil.png" alt="Foto de perfil">
-</section>
-<section id="conhecimentos">
-	<h2>Estou Estudando...</h2>
-	<ul>
-		<li>
-			Java<br>
-			Python<br>
-			Ambientes computacionais e conectividade<br>
-			Sistemas computacionais e segurança<br>
-		</li>
-	</ul>
-</section>
-<section id="projetos">
-	<h2>Meus Projetos</h2>
-	<ul>
-		<li>
-			<h3>Projeto 1: [Projeto Padawan]</h3>
-			<p>integrar o ensino de programação nas escolas públicas para alunos do 6º ao 9º ano</p>
-			<a href="/projetopadawan">Ver mais</a>
-		</li>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Project 1: <a href="https://github.com/AnthonyLuciano/JavaPlataform">Java Plataformer</a></h3>
+                    <p>Developed in Java as a way to learn about JavaFx and Swing, made using Java 8 as its base.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	</ul>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email, i will aways be available to chat, i plan on acquiring more contact methods.</p>
+            <ul>
+                <li>Email: <a href="mailto:anthonyluciano.dev@gmail.com">anthonyluciano.dev@gmail.com</a></li>
 
-</section>
+                <li>GitHub: <a href="https://github.com/AnthonyLuciano" target="_blank">github.com/AnthonyLuciano</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AnthonyLuciano. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
-
