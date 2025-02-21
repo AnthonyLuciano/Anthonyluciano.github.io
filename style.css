@@ -93,14 +93,6 @@ section h2 {
 }
 
 /* Contact Section */
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .contact ul {
     list-style: none;
     padding: 0;
