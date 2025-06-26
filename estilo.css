@@ -1,0 +1,131 @@
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2c3e50;
+    --cor-fundo: #f4f4f4;
+    --cor-clara: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background: var(--cor-clara);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ecf0f1;
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+.btn-lang {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--cor-clara);
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-lang:hover,
+.btn-lang:focus {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    outline: none;
+}
+
+header {
+    position: relative; /* para o botÃ£o ficar dentro do header */
+}
+
+.project {
+    display: block;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    background-color: #f9f9f9;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.project:hover {
+    background-color: #e6f2ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
