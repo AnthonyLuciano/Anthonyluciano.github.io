@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio de Anthony</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="src/estilo.css" />
 </head>
 <body>
   <header>
     <h1>Anthony - Portfólio Pessoal</h1>
     <p>Desenvolvedor Java, SpringBoot, Python (Manim) e estudante de Kotlin</p>
-    <a href="index-en.html" class="btn-lang" aria-label="Versão em inglês">EN</a>
+    <div class="header-buttons">
+      <a href="index.html" class="btn-lang" aria-label="English Version">EN</a>
+      <a id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</a>
+    </div>
   </header>
 
   <main>
@@ -47,6 +50,19 @@
           <h3>📚 Biblioteca Virtual</h3>
           <p>Sistema web criado com Spring Boot e Thymeleaf, com integração à API OpenLibrary.</p>
         </a>
+        <a class="project" href="blank" target="_blank" rel="noopener noreferrer">
+          <h3>🤗 HugMeBot</h3>
+          <p>Bot Discord em desenvolvimento para gerenciar doações via PIX e cartão, atribuindo cargos automaticamente aos apoiadores. Backend em Python com FastAPI e PostgreSQL.</p>
+        </a>
+        <a class="project" href="blank" target="_blank" rel="noopener noreferrer">
+          <h3>🐋 Deepseek-CLI</h3>
+          <p>Assistente de linha de comando para interagir com a API DeepSeek. Permite carregar projetos e responder perguntas inteligentes diretamente no terminal.</p>
+        </a>
+        <a class="project" href="blank" target="_blank" rel="noopener noreferrer">
+          <h3>📖 "Livrai-me"</h3>
+          <img src="src/semprojeto.svg" alt="placeholder" class="project-img">
+        </a>
+
       </div>
     </section>
 
@@ -61,5 +77,7 @@
   <footer>
     Desenvolvido por Anthony – 2025
   </footer>
+  <script src="src/script.js"></script>
+
 </body>
 </html>

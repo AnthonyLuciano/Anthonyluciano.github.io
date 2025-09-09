@@ -1,0 +1,228 @@
+/* === Variáveis e reset === */
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2c3e50; /* cor do texto */
+    --cor-fundo: #f4f4f4;       /* fundo do body */
+    --cor-clara: #ffffff;       /* fundo de boxes */
+}
+
+body.dark-mode {
+    --cor-primaria: #2980b9;
+    --cor-secundaria: #ecf0f1; /* texto claro */
+    --cor-fundo: #2c3e50;       /* fundo body dark */
+    --cor-clara: #34495e;       /* fundo das boxes dark */
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+}
+
+header p {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 1s 0.3s forwards;
+}
+
+.header-buttons {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    gap: 0.5rem;           /* espaçamento entre os botões */
+    z-index: 10;           /* garante que fique acima de tudo */
+}
+
+.btn-lang, #darkModeToggle {
+    background-color: var(--cor-clara);
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-lang:hover, #darkModeToggle:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    transform: scale(1.1);
+}
+
+
+/* === Main === */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Sections com fade-in ao aparecer */
+section {
+    background: var(--cor-clara);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+}
+
+/* Lista */
+ul {
+    padding-left: 1.2rem;
+}
+
+/* PROJECT CARDS */
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--cor-clara);
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 1em;
+    text-decoration: none;
+    color: inherit;
+    max-height: 400px;          /* limita altura máxima do card */
+    overflow: hidden;            /* evita que conteúdo grande estoure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    opacity: 0;                  /* para animação de fade-in */
+    transform: translateY(20px);
+    background-size: 200% 200%;  /* para gradiente animado */
+}
+
+/* Fade-in ao scroll */
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
+    animation: gradientShift 6s ease infinite;
+}
+
+/* Hover: expande + tilt + sombra */
+.project:hover {
+    transform: scale(1.05) rotateZ(1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    background: var(--cor-primaria);
+}
+
+/* Imagens SVG dentro do card */
+.project-img {
+    width: 100%;
+    height: auto;          /* mantém proporção original */
+    max-height: 150px;     /* limita altura máxima para não esticar o card */
+    display: block;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.project:hover .project-img {
+    transform: scale(1.03); /* leve zoom da imagem no hover */
+}
+
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ecf0f1;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Links */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Gradiente animado nos projetos */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.project {
+    animation: gradientShift 6s ease infinite;
+}
