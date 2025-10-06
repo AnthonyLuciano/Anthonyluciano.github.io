@@ -1,16 +1,16 @@
 /* === Variáveis e reset === */
 :root {
-    --cor-primaria: #3498db;
-    --cor-secundaria: #2c3e50; /* cor do texto */
-    --cor-fundo: #f4f4f4;       /* fundo do body */
-    --cor-clara: #ffffff;       /* fundo de boxes */
-}
-
-body.dark-mode {
     --cor-primaria: #2980b9;
     --cor-secundaria: #ecf0f1; /* texto claro */
-    --cor-fundo: #2c3e50;       /* fundo body dark */
-    --cor-clara: #34495e;       /* fundo das boxes dark */
+    --cor-fundo: #2c3e50;       /* fundo body */
+    --cor-clara: #34495e;       /* fundo das boxes */
+}
+
+body.light-mode {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2c3e50; /* cor do texto */
+    --cor-fundo: #f4f4f4;       /* fundo do body light */
+    --cor-clara: #ffffff;       /* fundo de boxes light */
 }
 
 
@@ -61,7 +61,7 @@ header p {
     z-index: 10;           /* garante que fique acima de tudo */
 }
 
-.btn-lang, #darkModeToggle {
+.btn-lang, #lightModeToggle {
     background-color: var(--cor-clara);
     color: var(--cor-primaria);
     border: 2px solid var(--cor-primaria);
@@ -74,7 +74,7 @@ header p {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-lang:hover, #darkModeToggle:hover {
+.btn-lang:hover, #lightModeToggle:hover {
     background-color: var(--cor-primaria);
     color: var(--cor-clara);
     transform: scale(1.1);

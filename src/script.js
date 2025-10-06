@@ -20,10 +20,10 @@ observer.observe(footer);
 // ===========================
 // DARK MODE
 // ===========================
-const toggleButton = document.getElementById('darkModeToggle');
+const toggleButton = document.getElementById('lightModeToggle');
 
 if (toggleButton) {
     toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
     });
 }
