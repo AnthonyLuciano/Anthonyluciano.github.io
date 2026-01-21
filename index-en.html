@@ -2,80 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anthony's Portfolio</title>
-  <link rel="stylesheet" href="src/estilo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Anthony Luciano</title>
+
+  <script type="module" crossorigin src="/assets/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>Anthony - Personal Portfolio</h1>
-    <p>Java, SpringBoot, Python (Manim) Developer and Kotlin Student</p>
-    <div class="header-buttons">
-      <a href="index.html" class="btn-lang" aria-label="Versão em português">PT</a>
-      <a id="lightModeToggle" aria-label="Toggle light Mode">🌙</a>
-    </div>
+
+<body class="bg-gray-950 text-gray-100 font-sans opacity-0 transition-opacity duration-700">
+
+  <!-- Header -->
+  <header class="reveal max-w-6xl mx-auto px-6 py-10 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Anthony.dev</h1>
+
+    <nav class="flex items-center space-x-6 text-gray-300">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+
+      <!-- Language -->
+      <a
+        href="index.html"
+        class="ml-4 px-3 py-1 text-sm rounded-lg bg-gray-800 hover:bg-gray-700 transition"
+      >
+        PT
+      </a>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I’m Anthony, an autistic PWD passionate about technology. I have experience with Java, Spring Boot, and Python using Manim.
-        Currently studying Kotlin and attending the Systems Analysis and Development course at Universidade Potiguar since 2024.
+  <!-- Hero -->
+  <section class="reveal max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-extrabold mb-6">Software Developer</h2>
+      <p class="text-gray-400 mb-8">
+        I build clean, efficient and scalable solutions. Passionate about backend,
+        automation and well-written code.
       </p>
-    </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>🔹 Computational Solutions Programming – 07/04/2024</li>
-        <li>🔹 Software Modeling – 07/04/2024</li>
-        <li>🔹 Computational Systems and Security – 12/18/2024</li>
-        <li>🔹 Computational Environments and Connectivity (Cisco) – 12/18/2024</li>
-      </ul>
-    </section>
+      <a
+        href="#projects"
+        class="inline-block bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+      >
+        View Projects
+      </a>
+    </div>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="projetos">
-        <a class="project" href="https://github.com/AnthonyLuciano/JavaPlataform" target="_blank" rel="noopener noreferrer">
-          <h3>🎮 Platformer Game</h3>
-          <p>A platform game developed with JavaFX during my initial Java studies.</p>
-        </a>
-        <a class="project" href="https://github.com/AnthonyLuciano/ProjetoUNPBank" target="_blank" rel="noopener noreferrer">
-          <h3>🏦 Banking System</h3>
-          <p>Desktop application in Java with Swing simulating basic banking operations.</p>
-        </a>
-        <a class="project" href="https://github.com/AnthonyLuciano/BibliotecaVirtual" target="_blank" rel="noopener noreferrer">
-          <h3>📚 Virtual Library</h3>
-          <p>Web system created with Spring Boot and Thymeleaf, integrated with the OpenLibrary API.</p>
-        </a>
-        <a class="project" href="https://github.com/AnthonyLuciano/HugMe-DiscordBot" target="_blank" rel="noopener noreferrer">
-          <h3>🤗 HugMeBot</h3>
-          <p>Discord bot in development to manage donations via PIX and credit/debit cards, automatically assigning roles to supporters. Backend built with Python, FastAPI, and PostgreSQL.</p>
-        </a>
-        <a class="project" href="https://github.com/AnthonyLuciano/deepseek-cli" target="_blank" rel="noopener noreferrer">
-          <h3>🐋 Deepseek-CLI</h3>
-          <p>Command-line assistant to interact with the DeepSeek API. Allows loading projects and answering intelligent questions directly from the terminal.</p>
-        </a>
-        <a class="project" href="inconstruction.html" target="_blank" rel="noopener noreferrer">
-          <h3>📖 "Livrai-me"</h3>
-          <img src="src/noproject.svg" alt="placeholder" class="project-img">
-        </a>
-    </section>
+    <div class="flex justify-center">
+      <img
+        src="assets/img/perfil.png"
+        alt="Profile photo"
+        class="w-64 h-64 object-cover rounded-full ring-4 ring-gray-700 shadow-xl"
+      />
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>📧 Email: <a href="mailto:anthonyluciano.dev@gmail.com">anthonyluciano.dev@gmail.com</a></p>
-      <p>🐙 GitHub: <a href="https://github.com/AnthonyLuciano" target="_blank" rel="noopener noreferrer">github.com/AnthonyLuciano</a></p>
-      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/anthony-luciano-dev/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anthony-luciano-dev/</a></p>
-    </section>
-  </main>
+  <!-- About -->
+  <section id="about" class="reveal max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-6">About me</h3>
+    <p class="text-gray-400 leading-relaxed max-w-3xl">
+      I am a developer focused on continuous learning and building real-world projects.
+      Experienced with Python, Linux, automation, bots, APIs and backend systems.
+      I value clean code, clear documentation and best practices.
+    </p>
+    <p class="mt-2 text-[10px] text-gray-600 italic select-none">
+        sometimes details get out of control...
+    </p>
 
-  <footer>
-    Developed by Anthony – 2025
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal bg-gray-900 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!--Hugme-->
+        <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-[1.02] transition">
+          <h4 class="text-xl font-semibold mb-2">🤗 HugMe-DiscordBot 🤖</h4>
+          <p class="text-gray-400 mb-4">
+            Python Discord bot with donation system and automatic roles.
+          </p>
+
+          <div class="flex gap-3 mt-4">
+            <a href="https://github.com/AnthonyLuciano/HugMe-DiscordBot" target="_blank" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              GitHub
+            </a>
+            <a href="https://codeberg.org/MrMedicmain/HugMe-DiscordBot" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              Codeberg
+            </a>
+          </div>
+        </div>
+        <!-- Livrai-me -->
+        <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-[1.02] transition">
+          <h4 class="text-xl font-semibold mb-2">🧑‍💻 Livrai-me 📖</h4>
+          <p class="text-gray-400 mb-4">
+            Donation and book subscription platform that connects donors to underprivileged children and encourages reading through monthly deliveries of books and gifts.
+          </p>
+
+          <div class="flex gap-3 mt-4">
+            <a href="https://github.com/AnthonyLuciano/Livraime" target="_blank" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              GitHub
+            </a>
+            <a href="https://codeberg.org/MrMedicmain/Livraime" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              Codeberg
+            </a>
+          </div>
+        </div>
+        <!--PrincessKnight-->
+        <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-[1.02] transition">
+          <h4 class="text-xl font-semibold mb-2">👑 Princess Knight 👑</h4>
+
+          <p class="text-gray-400 mb-4">
+            2D platformer game developed in Godot, where the player controls a warrior princess on a mission to save her kingdom.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a href="projetos/princess-knight-en.html" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              Project Page
+            </a>
+            <a href="https://mrmedicmain.itch.io/princessknight" target="_blank" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              Itch.io
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <p class="mt-2 text-[10px] text-center text-gray-600 italic select-none">
+            More projects to come!
+        </p>
+        <br>
+        <div class="mt-10 text-center">
+          <a
+            href="/projetos/index-en.html"
+            class="inline-block bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+          >
+            View More Projects
+          </a>
+        </div>
+    </div>
+    
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-6">Contact</h3>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+  <!-- Email -->
+  <a
+    href="mailto:anthonylucianodev@proton.me"
+    class="group bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition-all hover:-translate-y-1"
+  >
+    <div class="text-3xl mb-4">📧</div>
+    <h4 class="font-semibold text-lg group-hover:text-white">Email</h4>
+    <p class="text-sm text-gray-400 break-all">
+      anthonylucianodev@proton.me
+    </p>
+  </a>
+
+  <!-- GitHub -->
+  <a
+    href="https://github.com/anthonyluciano"
+    target="_blank"
+    class="group bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition-all hover:-translate-y-1"
+  >
+    <div class="text-3xl mb-4">🐙</div>
+    <h4 class="font-semibold text-lg group-hover:text-white">GitHub</h4>
+    <p class="text-sm text-gray-400">github.com/anthonyluciano</p>
+  </a>
+
+  <!-- Codeberg -->
+  <a
+    href="https://codeberg.org/MrMedicmain"
+    target="_blank"
+    class="group bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition-all hover:-translate-y-1"
+  >
+    <div class="text-3xl mb-4">🧊</div>
+    <h4 class="font-semibold text-lg group-hover:text-white">Codeberg</h4>
+    <p class="text-sm text-gray-400">MrMedicmain</p>
+  </a>
+
+  <!-- LinkedIn -->
+  <a
+    href="https://www.linkedin.com/in/anthony-luciano-dev/"
+    target="_blank"
+    class="group bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition-all hover:-translate-y-1"
+  >
+    <div class="text-3xl mb-4">💼</div>
+    <h4 class="font-semibold text-lg group-hover:text-white">LinkedIn</h4>
+    <p class="text-sm text-gray-400">Anthony Luciano</p>
+  </a>
+
+</div>
+
+
+  </section>
+
+  <footer class="text-center text-gray-500 py-8 border-t border-gray-800">
+    © 2025 • Anthony Luciano • All rights reserved
   </footer>
-  <script src="src/script.js"></script>
-
 </body>
 </html>

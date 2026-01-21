@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princess Knight — 2D Game</title>
+
+  <script type="module" crossorigin src="/assets/js/main.js"></script>
+  <script src="/assets/js/princess-knight.js" defer></script>
+  <link rel="stylesheet" crossorigin href="../assets/css/styles.css">
+</head>
+
+<body class="bg-gray-950 text-gray-100 font-sans opacity-0 transition-opacity duration-700">
+
+  <!-- Header -->
+  <header class="reveal max-w-6xl mx-auto px-6 py-10 flex justify-between items-center">
+    <a href="../index-en.html" class="text-sm text-gray-400 hover:text-white transition">
+      ← Back to portfolio
+    </a>
+
+    <a href="princess-knight.html" class="text-sm text-indigo-400 hover:text-indigo-300">
+      PT
+    </a>
+  </header>
+
+  <!-- Content -->
+  <main class="reveal max-w-6xl mx-auto px-6 py-20 space-y-10">
+
+    <!-- Title -->
+    <section class="reveal">
+      <h1 class="text-4xl font-bold mb-4">Princess Knight</h1>
+
+      <p class="text-gray-400 max-w-3xl leading-relaxed">
+        A 2D platformer game project developed in Godot, where the player controls
+        a warrior princess on her mission to save her kingdom.
+        The game features challenging levels, diverse enemies, and exciting power-ups.
+      </p>
+    </section>
+
+    <!-- Technologies -->
+    <section class="reveal">
+      <h2 class="text-xl font-semibold mb-3">Technologies</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-3 py-1 bg-gray-800 rounded-full">Godot</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full">GDScript</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full">Game Design</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full">2D Platformer</span>
+      </div>
+    </section>
+
+    <!-- Iframe with poster + lazy-load -->
+    <section class="reveal">
+      <h2 class="text-xl font-semibold mb-4">Game demo</h2>
+
+      <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-gray-800">
+        <div class="iframe-poster absolute inset-0 flex items-center justify-center text-gray-200 p-6" data-src="https://itch.io/embed-upload/15874911?color=333333" role="button" aria-label="Load demo">
+          <div class="flex items-center gap-4">
+            <div class="poster-play w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 shadow-lg">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M8 5v14l11-7L8 5z" fill="white" />
+              </svg>
+            </div>
+            <div class="poster-text text-sm text-left max-w-md">
+              <div class="font-semibold">Princess Knight — Demo</div>
+              <div class="text-xs text-gray-300 mt-1">Click to load the demo (Itch.io). Deferred load improves performance and avoids iframe blocking.</div>
+            </div>
+          </div>
+        </div>
+
+        <noscript>
+          <iframe src="https://itch.io/embed-upload/15874911?color=333333" class="absolute inset-0 w-full h-full"></iframe>
+        </noscript>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-2">
+        *If the demo does not load, the site may block iframe embedding. You can open the game on Itch.io.
+      </p>
+      <a href="https://mrmedicmain.itch.io/princessknight" target="_blank" class="px-3 py-1 rounded-lg bg-gray-700 text-sm hover:bg-gray-600 transition">
+              Itch.io
+            </a>
+    </section>
+  </main>
+</body>
+</html>
